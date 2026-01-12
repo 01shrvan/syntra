@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-jetbrains",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "syntra",
-  description: "team comms that just hit different. orgs, channels, infinite scroll, real-time vibes with durable objects, threads, reactions, billing baked in, and ai that'll summarize or ghostwrite your messages. built for b2b but feels like that one gc you never mute.",
+  description:
+    "team comms that just hit different. orgs, channels, infinite scroll, real-time vibes with durable objects, threads, reactions, billing baked in, and ai that'll summarize or ghostwrite your messages. built for b2b but feels like that one gc you never mute.",
 };
 
 export default function RootLayout({
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${spaceMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
