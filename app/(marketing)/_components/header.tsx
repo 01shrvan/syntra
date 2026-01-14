@@ -91,7 +91,7 @@ export const HeroHeader = () => {
                           variant: "outline",
                           size: "sm",
                           className: cn(isScrolled && "lg:hidden"),
-                      })}
+                        })}
                       >
                         Login
                       </LoginLink>
